@@ -1,0 +1,8 @@
+USE [sales_db];
+SELECT TOP 10* FROM dbo.product_table;
+SELECT Price ,AVG(Sales_y) AS Avg_sales FROM dbo.product_table GROUP BY Price ORDER BY Price;
+SELECT Category, SUM(Sales_y) AS Total_Sales FROM dbo.product_table GROUP BY Category ORDER BY Total_Sales DESC;
+SELECT Seasonality_T, SUM(Sales_y) AS Total_Sales FROM dbo.product_table GROUP BY Seasonality_T ORDER BY Total_Sales DESC;
+SELECT Price,AVG(Success_Percentage) AS Avg_Success FROM dbo.product_table GROUP BY Price ORDER BY Price;
+SELECT TOP 10 Product_Name FROM dbo.product_table ORDER BY Sales_y DESC;
+SELECT Rating,AVG(Sales_y) AS AVG_sales FROM dbo.product_table GROUP BY Rating ORDER BY Rating;
